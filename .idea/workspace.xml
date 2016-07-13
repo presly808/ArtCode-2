@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3239ab-edfe-48cd-af6f-16bd57ef57dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/week_2/Task_4_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_1.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_2.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_3.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_4.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_5.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_6.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_6.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_7.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_7.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_4_8.java" afterPath="$PROJECT_DIR$/src/week_1/Task_4_8.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_5_1.java" afterPath="$PROJECT_DIR$/src/week_1/Task_5_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_5_2.java" afterPath="$PROJECT_DIR$/src/week_1/Task_5_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\src\Task_5_3.java" afterPath="$PROJECT_DIR$/src/week_1/Task_5_3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ArtCode.iws" />
@@ -515,7 +501,7 @@
       <updated>1468082828955</updated>
       <workItem from="1468082835489" duration="360000" />
       <workItem from="1468257532540" duration="2132000" />
-      <workItem from="1468348961250" duration="8490000" />
+      <workItem from="1468348961250" duration="8527000" />
     </task>
     <task id="LOCAL-00001" summary="week 1 + additional">
       <created>1468083079781</created>
@@ -523,15 +509,21 @@
       <option name="project" value="LOCAL" />
       <updated>1468083079781</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="week 2">
+      <created>1468438304587</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1468438304587</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10982000" />
+    <option name="totallyTimeSpent" value="11019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -578,7 +570,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="week 1 + additional" />
-    <option name="LAST_COMMIT_MESSAGE" value="week 1 + additional" />
+    <MESSAGE value="week 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="week 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
