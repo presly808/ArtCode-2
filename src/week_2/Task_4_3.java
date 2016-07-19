@@ -1,9 +1,11 @@
 package week_2;
+
 import week_2.ArrayUtils;
 
 import java.util.Scanner;
 
 /**
+<<<<<<< Updated upstream
  * Created by oleksandr.maslovskyj on 19.07.2016.
  * Заданы два массива одинаковой длинны с любыми значениями скопировать данные из первого массива во второй
  */
@@ -13,7 +15,7 @@ public class Task_4_3 {
         copyArrays();
     }
 
-    public static void copyArrays(){
+    public static void copyArrays() {
 
         int length = length();
 
@@ -28,12 +30,12 @@ public class Task_4_3 {
         }
     }
 
-    public static boolean compareArraysLenght(int[] array1, int[] array2){
+    public static boolean compareArraysLenght(int[] array1, int[] array2) {
         boolean rez = false;
 
-        if ( array1.length == array2.length) {
+        if (array1.length == array2.length) {
             rez = true;
-        }else {
+        } else {
             rez = false;
         }
 
@@ -42,7 +44,7 @@ public class Task_4_3 {
         return rez;
     }
 
-    public static int length(){
+    public static int length() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("array length: ");
@@ -50,7 +52,7 @@ public class Task_4_3 {
 
         return length;
     }
-
-
-
 }
+
+
+
