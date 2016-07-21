@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Created by oleksandr.maslovskyj on 21.07.2016.
+ * public static int[] splitArray(int[] arr, int start, int end) {// обрезать массив по границам start и end}
  */
 public class Task_4_10 {
 
@@ -25,6 +26,7 @@ public class Task_4_10 {
 
     public static int[] splitArray(int[] arr, int start, int end){
 
+        System.out.print("new array: ");
         if (start >= 1 && end <= arr.length) {
 
             for (int i = 0; i < arr.length; i++) {
@@ -33,6 +35,8 @@ public class Task_4_10 {
                 }
                 System.out.print(arr[i] + ",");
             }
+        } else {
+            System.out.println("incorrect " + start + " or " + end + " parameters");
         }
         return arr;
     }
