@@ -10,31 +10,40 @@ import java.util.Scanner;
 public class Task_7_2_4 {
 
     public static void main(String[] args) {
-        moveValue();
-    }
-
-    public static void moveValue(){
         Scanner scanner = new Scanner(System.in);
 
-        int[] arra = {1,2,3,4,5};
         System.out.print("value to move: ");
         int moveValue = scanner.nextInt();
 
+        int[] arra = {1,2,3,4,5};
+        int[] newArray = moveValue(arra, moveValue);
+        displayArray(newArray);
+    }
+
+    public static int[] moveValue(int[] arra, int moveValue){
         int[] tmpArray = new int[arra.length];
+
+        for (int i = moveValue; i < arra.length; i++) {
+            for (int j = 0; j < moveValue; j++) {
+                tmpArray[j] = arra[i];
+                i++;
+            }
+        }
+
         for (int i = 0; i < moveValue; i++) {
-            tmpArray[i] = arra[arra.length - moveValue + i];
+            for (int j = moveValue; j < tmpArray.length; j++) {
+                tmpArray[j] = arra[i];
+                i++;
+            }
         }
+        return tmpArray;
+    }
 
-        for (int i = 0; i < arra.length - moveValue; i++) {
-            arra[i + moveValue] = arra[i];
+    public static void displayArray(int[] array){
+        System.out.print("array: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ",");
         }
-
-        for (int i = 0; i < moveValue; i++) {
-            arra[i] = tmpArray[i];
-        }
-
-        for(int str:arra)
-            System.out.print(str);
     }
 
 }
