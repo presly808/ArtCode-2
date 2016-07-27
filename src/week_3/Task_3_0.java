@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by oleksandr.maslovskyj on 27.07.2016.
  * Матрицы генерировать случайными числами и размер матрицы вводит юзер.
  */
-public class Task_3 {
+public class Task_3_0 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
