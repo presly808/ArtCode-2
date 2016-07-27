@@ -9,5 +9,27 @@ public class ArrayUtils {
         return (int)(Math.random() * (max - min) + min);
     }
 
-    public static int[] generate
+    public static String toString(int[][] matrix){
+
+        if (matrix.length == 0) {
+            return "matrix empty";
+        }
+        if (matrix == null) {
+            return "wrong argument";
+        }
+
+        String result = "";
+        for (int i = 0; i < matrix.length; i++) {
+
+            int[] tmp = matrix[i];
+            for (int j = 0; j < tmp.length; j++) {
+                int num = tmp[j];
+                result += num + " ";
+            }
+
+            result += "\n";
+        }
+        System.out.println(result);
+        return result;
+    }
 }
