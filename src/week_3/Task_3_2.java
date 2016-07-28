@@ -18,21 +18,21 @@ public class Task_3_2 {
         System.out.print("column: ");
         int column = scanner.nextInt();
 
-        int[][] matrix = generateLogicMatrix(line, column);
+        boolean[][] matrix = generateLogicMatrix(line, column);
         ArrayUtils.toString(matrix);
     }
 
-    public static int[][] generateLogicMatrix(int line, int column){
-        int[][] logicMatrix= new int[line][column];
+    public static boolean[][] generateLogicMatrix(int line, int column){
+        boolean[][] logicMatrix= new boolean[line][column];
 
         for (int i = 0; i < logicMatrix.length; i++) {
 
-            int[] tmp = logicMatrix[i];
+            boolean[] tmp = logicMatrix[i];
             for (int j = 0; j < tmp.length; j++) {
                 if (i == j) {
-                    tmp[j] = 0;
+                    tmp[j] = true;
                 } else {
-                    tmp[j] = 1;
+                    tmp[j] = false;
                 }
             }
         }
