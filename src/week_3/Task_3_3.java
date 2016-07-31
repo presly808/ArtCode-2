@@ -1,4 +1,7 @@
 package week_3;
+
+import java.util.Scanner;
+
 /**
  * Created by oleksandr.maslovskyj on 28.07.2016.
  * Написать метод, который проверяет является ли строка палиндромом А РОЗА УПАЛА НА ЛАПУ АЗОРА
@@ -6,15 +9,21 @@ package week_3;
 public class Task_3_3 {
 
     public static void main(String[] args) {
-        checkStringToPolindrom();
-        System.out.println(checkStringToPolindrom());
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("String: ");
+        String line = scanner.nextLine();
+
+        boolean result = checkStringToPolindrom(line);
+        System.out.println(result);
     }
 
-    public static int checkStringToPolindrom(){
-        String str = "abcd abcd";
+    public static boolean checkStringToPolindrom(String str){
+
         StringBuilder tmp = new StringBuilder(str);
-        int result = str.compareToIgnoreCase(String.valueOf(tmp.reverse()));
-        return result;
+        str = str.replaceAll("\\s+","");
+        String tmpStr = String.valueOf(tmp.reverse()).replaceAll("\\s+","");
+        return str.equalsIgnoreCase(tmpStr);
     }
 
 }

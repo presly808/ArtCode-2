@@ -55,4 +55,12 @@ public class ArrayUtils {
         System.out.println(result);
         return result;
     }
+
+    public static void printArray(int[] array){
+
+        System.out.print("array: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ",");
+        }
+    }
 }
