@@ -27,31 +27,31 @@ public class Task_3_5 {
 
         int[][] matrix = Task_3_0.generateMatrix(row, column, minSize, maxSize);
         ArrayUtils.toString(matrix);
-        int minSum = minRowSize(matrix);
-        System.out.println("min Sum: " + minSum);
-        int minRowNumber = findRowNumber(matrix, minSum);
-        System.out.println(minRowNumber);
+        int maxSum = maxRowSize(matrix);
+        System.out.println("min Sum: " + maxSum);
+        int maxRowNumber = findRowNumber(matrix, maxSum);
+        System.out.println(maxRowNumber);
         System.out.println("------------------------------------------");
 
         int[][] array = Task_3_0.generateMatrix(2, column, minSize, maxSize);
         ArrayUtils.toString(array);
-        int maxSum = maxRowSize(array);
-        System.out.println("max Sum: " + maxSum);
-        int maxRowNumber = findRowNumber(array, maxSum);
+        int minSum = minRowSize(array);
+        System.out.println("max Sum: " + minSum);
+        int minRowNumber = findRowNumber(array, minSum);
         System.out.println(maxRowNumber);
         System.out.println("------------------------------------------");
 
-        matrix = changePlaces(matrix, array, minRowNumber, maxRowNumber);
+        matrix = changePlaces(matrix, array, maxRowNumber, minRowNumber);
         ArrayUtils.toString(matrix);
     }
 
-    public static int[][] changePlaces(int[][] array, int[][] matrix, int minRowNumber, int maxRowNumber){
+    public static int[][] changePlaces(int[][] array, int[][] matrix, int maxRowNumber, int minRowNumber){
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                int tmpFirst = matrix[minRowNumber][i];
-                matrix[minRowNumber][i] = array[maxRowNumber][j];
-                array[maxRowNumber][j] = tmpFirst;
+                int tmpFirst = matrix[maxRowNumber][i];
+                matrix[maxRowNumber][i] = array[minRowNumber][j];
+                array[minRowNumber][j] = tmpFirst;
                 i++;
             }
         }
