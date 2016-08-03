@@ -14,23 +14,35 @@ public class Task_3_6 {
 
     public static void main(String[] args) {
 
-        int result = returnLengthOfOne("000001111");
-        System.out.println(result);
+        int[] result = returnArrayIndexOfNumberOne("000001111");
+        System.out.println(findMaxLength(result));
+
     }
 
-    public static int returnLengthOfOne(String str){
+    public static int[] returnArrayIndexOfNumberOne(String str){
         StringBuilder stringBuilder = new StringBuilder(str);
-        int result = 0;
+        int[] tmpArray = new int[str.length()];
         for (int i = 0; i < str.length(); i++) {
-             result = stringBuilder.indexOf("1");
+            tmpArray[i] = stringBuilder.indexOf("1");
 
         }
-
-        return result + 1;
+        return tmpArray;
     }
 
     public static void returnLengthOfZero(String str){
 
+    }
+
+    public static int findMaxLength(int[] array){
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            while (array[i] == array[i + 1] -1){
+                counter++;
+                i++;
+            }
+        }
+
+        return counter;
     }
 
 }
