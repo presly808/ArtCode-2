@@ -1,4 +1,4 @@
-package Level_2.week_1;
+package Level_2.week_1.HomeWork1;
 
 /**
  * Created by pc on 06.08.2016.
@@ -24,6 +24,8 @@ public class Company {
         addUser(user1);
         addUser(user2);
         showUser(users);
+        removeUser(users, user1);
+        showUser(users);
 
     }
 
@@ -40,6 +42,8 @@ public class Company {
 
     public static User[] removeUser(User[] users, User user){
         for (int i = 0; i < users.length; i++) {
+
+            // return users[i] == user ? users[i] = null : "user doesn`t exist";
             if (users[i] == user) {
                 users[i] = null;
                 break;

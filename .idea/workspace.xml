@@ -2,61 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3239ab-edfe-48cd-af6f-16bd57ef57dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Level_2/week_1/Company.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Level_2/week_1/User.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_2.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_4.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_5.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_6.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_6.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_7.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_7.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_4_8.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_4_8.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_5_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_5_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_5_2.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_5_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1\Task_5_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1/Task_5_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_10.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_10.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_11.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_11.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_12.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_12.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_13.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_13.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_14.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_14.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_15.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_15.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_2.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_4.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_5.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_6.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_6.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_7.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_7.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_8.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_8.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_1_additional\Task_9.java" afterPath="$PROJECT_DIR$/src/Level_1/week_1_additional/Task_9.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\ArrayUtils.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/ArrayUtils.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_10.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_10.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_4.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_5.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_6.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_6.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_7.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_7.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_8.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_8.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2\Task_4_9.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2/Task_4_9.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2_additional\Task_7_2_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2_additional/Task_7_2_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2_additional\Task_7_2_2.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2_additional/Task_7_2_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2_additional\Task_7_2_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2_additional/Task_7_2_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2_additional\Task_7_2_4.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2_additional/Task_7_2_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_2_additional\Task_7_2_5.java" afterPath="$PROJECT_DIR$/src/Level_1/week_2_additional/Task_7_2_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\ArrayUtils.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/ArrayUtils.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_0.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_0.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_1.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_1.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_2.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_2.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_3.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_3.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_4.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_4.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_5.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_5.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_6.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_6.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_7.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_7.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_8.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_8.java" />
-      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\week_3\Task_3_9.java" afterPath="$PROJECT_DIR$/src/Level_1/week_3/Task_3_9.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Address.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Contact.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/ContactList.java" />
+      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\Level_2\week_1\Company.java" afterPath="$PROJECT_DIR$/src/Level_2/week_1/HomeWork1/Company.java" />
+      <change type="MOVED" beforePath="C:\Users\pc\Desktop\ArtCode\ArtCode\src\Level_2\week_1\User.java" afterPath="$PROJECT_DIR$/src/Level_2/week_1/HomeWork1/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ArtCode.iws" />
@@ -83,24 +33,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/User.java">
+      <file leaf-file-name="ContactList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/ContactList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.7479407" vertical-offset="362" max-vertical-offset="969">
+              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding>
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+                <element signature="method#addContact#0;class#ContactList#0" expanded="false" />
+                <element signature="method#removeContact#0;class#ContactList#0" expanded="false" />
+                <element signature="method#checkUniqueName#0;class#ContactList#0" expanded="false" />
+                <element signature="method#findContactPositionInContactList#0;class#ContactList#0" expanded="false" />
+                <element signature="method#findContact#0;class#ContactList#0" expanded="false" />
+                <element signature="method#checkPresentContactInContactList#0;class#ContactList#0" expanded="false" />
+                <element signature="method#expandContactList#0;class#ContactList#0" expanded="false" />
+                <element signature="method#showSomeContacts#0;class#ContactList#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/Company.java">
+      <file leaf-file-name="Contact.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Contact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.199005" vertical-offset="51" max-vertical-offset="1207">
-              <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="docComment;class#Company#0" expanded="false" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Address.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,6 +125,11 @@
         <option value="$PROJECT_DIR$/src/Level_2/week_1/Test_1.java" />
         <option value="$PROJECT_DIR$/src/Level_2/week_1/User.java" />
         <option value="$PROJECT_DIR$/src/Level_2/week_1/Company.java" />
+        <option value="$PROJECT_DIR$/src/Level_2/week_1/HomeWork1/Company.java" />
+        <option value="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Adress.java" />
+        <option value="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Address.java" />
+        <option value="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Contact.java" />
+        <option value="$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/ContactList.java" />
       </list>
     </option>
   </component>
@@ -174,7 +153,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -243,6 +222,32 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Level_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="week_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ContactListApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -264,6 +269,9 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Level_2.week_1.ContactListApplication" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pc\Desktop\ArtCode\src" />
     </key>
@@ -368,7 +376,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Level_2.week_1.Company" />
+      <option name="MAIN_CLASS_NAME" value="Level_2.week_1.HomeWork1.Company" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -664,7 +672,7 @@
       <workItem from="1469717309655" duration="4044000" />
       <workItem from="1469727687596" duration="14572000" />
       <workItem from="1470236606983" duration="4064000" />
-      <workItem from="1470246487108" duration="10592000" />
+      <workItem from="1470246487108" duration="18534000" />
     </task>
     <task id="LOCAL-00001" summary="Task_4_3">
       <created>1468918426469</created>
@@ -744,11 +752,17 @@
       <option name="project" value="LOCAL" />
       <updated>1470257931766</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Task_4_4">
+      <created>1470513135947</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1470513135947</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101988000" />
+    <option name="totallyTimeSpent" value="109930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -765,7 +779,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32283464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32283464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1151,20 +1165,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/User.java">
+    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/HomeWork1/Company.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+        <state vertical-scroll-proportion="0.028006589" vertical-offset="357" max-vertical-offset="1275">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#Company#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/HomeWork1/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30807248" vertical-offset="0" max-vertical-offset="607">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/Company.java">
+    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.199005" vertical-offset="51" max-vertical-offset="1207">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#Company#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Level_2/week_1/ContactListApplication/ContactList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7479407" vertical-offset="362" max-vertical-offset="969">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="method#addContact#0;class#ContactList#0" expanded="false" />
+            <element signature="method#removeContact#0;class#ContactList#0" expanded="false" />
+            <element signature="method#checkUniqueName#0;class#ContactList#0" expanded="false" />
+            <element signature="method#findContactPositionInContactList#0;class#ContactList#0" expanded="false" />
+            <element signature="method#findContact#0;class#ContactList#0" expanded="false" />
+            <element signature="method#checkPresentContactInContactList#0;class#ContactList#0" expanded="false" />
+            <element signature="method#expandContactList#0;class#ContactList#0" expanded="false" />
+            <element signature="method#showSomeContacts#0;class#ContactList#0" expanded="false" />
           </folding>
         </state>
       </provider>
