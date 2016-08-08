@@ -9,8 +9,4 @@ public class Task_3_9 {
     public static void main(String[] args) {
 
     }
-
-
-
-
 }
