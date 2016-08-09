@@ -1,4 +1,4 @@
-package Level_2.week_1;
+package Level_2.week_1.HomeWork1;
 
 /**
  * Created by pc on 06.08.2016.
