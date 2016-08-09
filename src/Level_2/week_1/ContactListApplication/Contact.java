@@ -28,8 +28,16 @@ public class Contact {
         return name;
     }
 
+    public String getSurname(){
+        return surname;
+    }
+
     public String getOperator(){
         return operator;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
