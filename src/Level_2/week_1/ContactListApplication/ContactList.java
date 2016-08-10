@@ -5,83 +5,75 @@ package Level_2.week_1.ContactListApplication;
  */
 public class ContactList {
 
-    Contact[] contactList;
-
-    private int contactPosition;
+    private Contact[] contactList;
     private int busyPlaces;
-
-    private String showFirstFiveContacts = "FIRST_FIVE";
-    private String showLastFiveContacts = "LAST_FIVE";
-    private String showALLContacts = "ALL";
-    private String showLifeContacts = "LIFE";
-    private String showKievstarContacts = "KIEVSTAR";
 
     public void createContactList(){
         contactList = new Contact[100];
     }
 
-    public Contact[] addContact(Contact contact){
+    public boolean addContact(Contact contact){
         expandContactList();
-        if (contactValidation(contact) == true) {
-            if (checkUniqueName(contact) == true) {
+        boolean result = false;
+        if (contactValidation(contact)) {
+            if (checkUniqueName(contact)) {
                 for (int i = 0; i < contactList.length; i++) {
                     if (contactList[i] == null) {
                         contactList[i] = contact;
                         busyPlaces++;
+                        result = true;
                         break;
                     }
                 }
             } else
                 System.out.println(contact.getName() + " not unique");
+                result = false;
         } else {
             System.out.println("Wrong validation for contact with name : " + contact.getName());
+            result = false;
+
         }
-        return contactList;
+        return result;
     }
 
-    public Contact[] removeContact(String contactName){
-        if (checkPresentContactInContactList() == true) {
+    public boolean removeContact(String contactName){
+
+        boolean result = false;
+        if (checkPresentContactInContactList()) {
             int contactPosition = findContactPositionInContactList(contactName);
-                    contactList[contactPosition] = null;
-                    if (contactPosition != contactList.length - 1) {
-                        for (int j = contactPosition + 1; j < contactList.length; j++) {
-                            if (contactList[j] != null) {
-                                contactList[contactPosition] = contactList[j];
-                            }
-                        }
-                    }
+            contactList[contactPosition] = null;
+            result = true;
             busyPlaces--;
-            System.out.println("contact with name : " + contactName + " removed");
+            for (int i = contactPosition; i < contactList.length; i++) {
+                if (i < contactList.length - 1) {
+                    contactList[i] = contactList[i + 1];
+                }
+            }
         }
-        return contactList;
+        return result;
     }
 
     // update name for contact
-    public Contact[] updateContactInfo(String contactName, String newContactData){
+    public boolean updateContactInfo(String contactName, String newContactData){
 
-        if (contactValidation(newContactData) == true) {
+        boolean result = false;
+        if (contactValidation(newContactData)) {
             int contactPosition = findContactPositionInContactList(contactName);
-            contactList[contactPosition].setName(newContactData);
+            if (contactPosition != -1) {
+                contactList[contactPosition].setName(newContactData);
+                result = true;
+            } else {
+                System.out.println("contact with name: " + contactName + " doesn`t exist");
+                result = false;
+            }
         }
-        return contactList;
+        return result;
     }
-
-    // update contact name to new contact name
-//    public Contact[] updateContactInfo(int contactPosition, String newContactName){
-//
-//        if (contactValidation(newContactName) == true) {
-//            for (int i = 0; i < contactList.length; i++) {
-//                Contact con = contactList[contactPosition];
-//                con.getName() = newContactName;
-//            }
-//        }
-//        return contactList;
-//    }
 
     public boolean checkUniqueName(Contact contact){
         boolean uniqueNameResult = false;
 
-        if (checkPresentContactInContactList() == true) {
+        if (checkPresentContactInContactList()) {
 
             for (int i = 0; i < busyPlaces; i++) {
                     if (contactList[i].getName() == contact.getName()) {
@@ -101,25 +93,23 @@ public class ContactList {
     // find contact position in Contact list by contact name
     public int findContactPositionInContactList(String contactName) {
 
-        int counter = 0;
-        if (checkPresentContactInContactList() == true) {
-            for (int i = 0; i < busyPlaces; i++) {
-                String name = contactList[i].getName();
-                if (name == contactName) {
-                    contactPosition = i;
-                    counter++;
+        int i = 0;
+        if (checkPresentContactInContactList()) {
+            for (i = 0; i < contactList.length; i++) {
+                if (contactList[i].getName() == contactName) {
+                    return i;
                 }
             }
-            if (counter == 0) {
-                System.out.println("contact with name: " + contactName + " doesn`t exist");
+            if (i == 0) {
+                return -1;
             }
         }
-        return contactPosition;
+        return i;
     }
 
     // find and show contact info by contact name
     public String findContactInContactList(String contactName) {
-        if (checkPresentContactInContactList() == true) {
+        if (checkPresentContactInContactList()) {
 
             for (int i = 0; i < contactList.length; i++)
                 return contactList[i].getName() == contactName ? contactList[i].toString() : "contact doesn`t exist";
@@ -151,56 +141,24 @@ public class ContactList {
         }
     }
 
-    /* return result depends on String number:
-     can be: LAST_FIVE - return last five contacts
-     FIRST_FIVE - return string with first five contacts
-     ALL - return all Contacts list
-    */
-    public String showSomeContacts(String number){
+    public String showLastFiveContacts(){
+
         String resultContacts = "";
         int counter = 0;
 
-        if (number == showLastFiveContacts) {
+        for (int i = 0; i < contactList.length; i++) {
 
-            for (int i = 0; i < contactList.length; i++) {
-
-                int lastPosition = contactList.length - i - 1;
-                if (contactList[lastPosition] == null) {
-                    i++;
-                } else {
-                    resultContacts += contactList[lastPosition].toString() + "\n";
-                    counter++;
-                    if (counter == 5) {
-                        resultContacts += " " + contactList[i].toString() + "\n";
-                    } else {
-                        if (counter < 5 && i == lastPosition) {
-                            resultContacts = "contactList contains less than 5 contacts: \n" + resultContacts;
-                        }
-                    }
-                }
-
-            }
-
-        } else {
-
-            if (number == showFirstFiveContacts) {
-                for (int i = 0; i < 5; i++) {
-
-                    if (contactList[i] == null) {
-                        resultContacts += " contact not exist \n";
-                    } else {
-                        resultContacts += " " + contactList[i].toString() + "\n";
-                    }
-                }
+            int lastPosition = contactList.length - i - 1;
+            if (contactList[lastPosition] == null) {
+                i++;
             } else {
-
-                if (number == showALLContacts) {
-                    for (int i = 0; i < busyPlaces; i++) {
-                        if (contactList[i] == null) {
-                            resultContacts += " contact not exist \n";
-                        } else {
-                            resultContacts += " " + contactList[i].toString() + "\n";
-                        }
+                resultContacts += contactList[lastPosition].toString() + "\n";
+                counter++;
+                if (counter == 5) {
+                    resultContacts += " " + contactList[i].toString() + "\n";
+                } else {
+                    if (counter < 5 && i == lastPosition) {
+                        resultContacts = "contactList contains less than 5 contacts: \n" + resultContacts;
                     }
                 }
             }
@@ -208,27 +166,49 @@ public class ContactList {
         return resultContacts;
     }
 
-    public String showContactsByOperator(String operator){
-        String result = "";
+    public String showFirstFiveContacts(){
 
-            if (operator == showLifeContacts) {
-                for (int j = 0; j < busyPlaces; j++) {
-                    if (contactList[j].getOperator() == operator) {
-                        result += contactList[j].toString() + " \n";
-                    }
-                 }
+        String resultContacts = "";
+        for (int i = 0; i < 5; i++) {
+
+            if (contactList[i] == null) {
+                resultContacts += " contact not exist \n";
             } else {
-                    if (operator == showKievstarContacts) {
-                        for (int j = 0; j < busyPlaces; j++) {
-                            if (contactList[j].getOperator() == operator) {
-                                result += contactList[j].toString() + " \n";
-                            }
-                        }
-                    }
-                }
+                resultContacts += " " + contactList[i].toString() + "\n";
+            }
+        }
+        return resultContacts;
+    }
 
-        if (result == "") {
-            result = operator + " not exist";
+    public String showALLContacts(){
+
+        String resultContacts = "";
+        for (int i = 0; i < busyPlaces; i++) {
+            if (contactList[i] == null) {
+                resultContacts += " contact not exist \n";
+            } else {
+                resultContacts += " " + contactList[i].toString() + "\n";
+            }
+        }
+        return resultContacts;
+    }
+
+    public String showLifeContacts(){
+        String result = "";
+        for (int j = 0; j < busyPlaces; j++) {
+            if (contactList[j].getOperator() == "LIFE") {
+                result += contactList[j].toString() + " \n";
+            }
+        }
+        return result;
+    }
+
+    public String showKievstarContacts(){
+        String result = "";
+        for (int j = 0; j < busyPlaces; j++) {
+            if (contactList[j].getOperator() == "KIEVSTAR") {
+                result += contactList[j].toString() + " \n";
+            }
         }
         return result;
     }

@@ -30,12 +30,12 @@ public class Main {
         contactList.addContact(contact2);
         contactList.addContact(contact3);
 
-        System.out.println(contactList.showSomeContacts("ALL"));
+        System.out.println(contactList.showALLContacts());
 
         contactList.removeContact("nameFirstB");
-        System.out.println(contactList.showSomeContacts("ALL"));
+        System.out.println(contactList.showALLContacts());
 
         contactList.updateContactInfo("nameFirstA", "newNameForTest");
-        System.out.println(contactList.showSomeContacts("ALL"));
+        System.out.println(contactList.showALLContacts());
     }
 }
