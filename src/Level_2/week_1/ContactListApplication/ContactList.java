@@ -17,14 +17,8 @@ public class ContactList {
         boolean result = false;
         if (contactValidation(contact)) {
             if (checkUniqueName(contact)) {
-                for (int i = 0; i < contactList.length; i++) {
-                    if (contactList[i] == null) {
-                        contactList[i] = contact;
-                        busyPlaces++;
-                        result = true;
-                        break;
-                    }
-                }
+                contactList[busyPlaces] = contact;
+                busyPlaces++;
             } else
                 System.out.println(contact.getName() + " not unique");
                 result = false;
@@ -44,11 +38,7 @@ public class ContactList {
             contactList[contactPosition] = null;
             result = true;
             busyPlaces--;
-            for (int i = contactPosition; i < contactList.length; i++) {
-                if (i < contactList.length - 1) {
-                    contactList[i] = contactList[i + 1];
-                }
-            }
+            // arraycopy
         }
         return result;
     }
@@ -108,7 +98,7 @@ public class ContactList {
     }
 
     // find and show contact info by contact name
-    public String findContactInContactList(String contactName) {
+    public String findAndShowContactInContactList(String contactName) {
         if (checkPresentContactInContactList()) {
 
             for (int i = 0; i < contactList.length; i++)
@@ -141,24 +131,25 @@ public class ContactList {
         }
     }
 
-    public String showLastFiveContacts(){
-
-        String resultContacts = "";
+    public StringBuilder showLast(int valueToShow){
+        StringBuilder resultContacts = new StringBuilder("");
         int counter = 0;
 
-        for (int i = 0; i < contactList.length; i++) {
+        if (parameterValidation(valueToShow)) {
+            for (int i = 0; i < contactList.length; i++) {
 
-            int lastPosition = contactList.length - i - 1;
-            if (contactList[lastPosition] == null) {
-                i++;
-            } else {
-                resultContacts += contactList[lastPosition].toString() + "\n";
-                counter++;
-                if (counter == 5) {
-                    resultContacts += " " + contactList[i].toString() + "\n";
+                int lastPosition = contactList.length - i - 1;
+                if (contactList[lastPosition] == null) {
+                    i++;
                 } else {
-                    if (counter < 5 && i == lastPosition) {
-                        resultContacts = "contactList contains less than 5 contacts: \n" + resultContacts;
+                    resultContacts.append(contactList[lastPosition].toString() + "\n");
+                    counter++;
+                    if (counter == valueToShow) {
+                        resultContacts.append(contactList[i].toString() + "\n");
+                    } else {
+                        if (counter < valueToShow && i == lastPosition) {
+                            resultContacts.append("contactList contains less than" + valueToShow + " contacts: \n" + resultContacts);
+                        }
                     }
                 }
             }
@@ -166,48 +157,50 @@ public class ContactList {
         return resultContacts;
     }
 
-    public String showFirstFiveContacts(){
+    public StringBuilder showFirst(int valueToShow){
+        StringBuilder resultContacts = new StringBuilder("");
 
-        String resultContacts = "";
-        for (int i = 0; i < 5; i++) {
+        if (parameterValidation(valueToShow)) {
+            for (int i = 0; i < valueToShow; i++) {
 
-            if (contactList[i] == null) {
-                resultContacts += " contact not exist \n";
-            } else {
-                resultContacts += " " + contactList[i].toString() + "\n";
+                if (contactList[i] == null) {
+                    resultContacts.append(" contact not exist \n");
+                } else {
+                    resultContacts.append(" " + contactList[i].toString() + "\n");
+                }
             }
         }
         return resultContacts;
     }
 
-    public String showALLContacts(){
+    public StringBuilder showALLContacts(){
 
-        String resultContacts = "";
+        StringBuilder resultContacts = new StringBuilder("");
         for (int i = 0; i < busyPlaces; i++) {
             if (contactList[i] == null) {
-                resultContacts += " contact not exist \n";
+                resultContacts.append(" contact not exist \n");
             } else {
-                resultContacts += " " + contactList[i].toString() + "\n";
+                resultContacts.append(" " + contactList[i].toString() + "\n");
             }
         }
         return resultContacts;
     }
 
-    public String showLifeContacts(){
-        String result = "";
+    public StringBuilder showLifeContacts(){
+        StringBuilder result = new StringBuilder("");
         for (int j = 0; j < busyPlaces; j++) {
             if (contactList[j].getOperator() == "LIFE") {
-                result += contactList[j].toString() + " \n";
+                result.append(contactList[j].toString() + " \n");
             }
         }
         return result;
     }
 
-    public String showKievstarContacts(){
-        String result = "";
+    public StringBuilder showKievstarContacts(){
+        StringBuilder result = new StringBuilder("");
         for (int j = 0; j < busyPlaces; j++) {
             if (contactList[j].getOperator() == "KIEVSTAR") {
-                result += contactList[j].toString() + " \n";
+                result.append(contactList[j].toString() + " \n");
             }
         }
         return result;
@@ -222,5 +215,13 @@ public class ContactList {
     // check all symbols 7sdf463dfg276
     public boolean contactValidation(String contactName){
         return (contactName == null) ? false : !(contactName.matches("^\\D*$")) ? false : true;
+    }
+
+    public boolean parameterValidation(int value){
+        if (value > contactList.length) {
+            System.out.println(value + " is very big");
+            return false;
+        }
+        return true;
     }
 }
