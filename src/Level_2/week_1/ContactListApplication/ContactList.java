@@ -14,20 +14,19 @@ public class ContactList {
 
     public boolean addContact(Contact contact){
         expandContactList();
-        boolean result = false;
         if (contactValidation(contact)) {
             if (checkUniqueName(contact)) {
                 contactList[busyPlaces] = contact;
                 busyPlaces++;
+                return true;
             } else
                 System.out.println(contact.getName() + " not unique");
-                result = false;
+                return false;
         } else {
             System.out.println("Wrong validation for contact with name : " + contact.getName());
-            result = false;
+            return false;
 
         }
-        return result;
     }
 
     public boolean removeContact(String contactName){
@@ -38,7 +37,7 @@ public class ContactList {
             contactList[contactPosition] = null;
             result = true;
             busyPlaces--;
-            System.arraycopy(contactList, 0, contactList, 1, contactPosition);
+            System.arraycopy(contactList, contactPosition + 1, contactList, contactPosition, contactPosition);
         }
         return result;
     }
@@ -48,15 +47,20 @@ public class ContactList {
 
         boolean result = false;
         if (contactValidation(newContactData)) {
-            int contactPosition = findContactPositionInContactList(contactName);
-            if (contactPosition != -1) {
-                contactList[contactPosition].setName(newContactData);
-                result = true;
-            } else {
-                System.out.println("contact with name: " + contactName + " doesn`t exist");
+            if (checkUniqueName(newContactData)) {
+                int contactPosition = findContactPositionInContactList(contactName);
+                if (contactPosition != -1) {
+                    contactList[contactPosition].setName(newContactData);
+                    result = true;
+                    }
+                } else {
+                System.out.println(newContactData + " not unique");
                 result = false;
+                }
+            } else {
+            System.out.println("contact with name: " + contactName + " doesn`t exist");
+            result = false;
             }
-        }
         return result;
     }
 
@@ -77,6 +81,26 @@ public class ContactList {
             } else {
                 uniqueNameResult = true;
             }
+        return uniqueNameResult;
+    }
+
+    public boolean checkUniqueName(String contactName){
+        boolean uniqueNameResult = false;
+
+        if (checkPresentContactInContactList()) {
+
+            for (int i = 0; i < busyPlaces; i++) {
+                if (contactList[i].getName() == contactName) {
+                    uniqueNameResult = false;
+                    break;
+                } else {
+                    uniqueNameResult = true;
+                }
+            }
+
+        } else {
+            uniqueNameResult = true;
+        }
         return uniqueNameResult;
     }
 
@@ -131,8 +155,9 @@ public class ContactList {
         }
     }
 
-    public StringBuilder showLast(int valueToShow){
-        StringBuilder resultContacts = new StringBuilder("");
+    public String showLast(int valueToShow){
+
+        StringBuilder resultContacts = new StringBuilder();
         int counter = 0;
 
         if (parameterValidation(valueToShow)) {
@@ -142,10 +167,10 @@ public class ContactList {
                 if (contactList[lastPosition] == null) {
                     i++;
                 } else {
-                    resultContacts.append(contactList[lastPosition].toString() + "\n");
+                    resultContacts.append(" " + i + "| " + contactList[lastPosition].toString() + "\n");
                     counter++;
                     if (counter == valueToShow) {
-                        resultContacts.append(contactList[i].toString() + "\n");
+                        resultContacts.append(" " + i + "| " + contactList[i].toString() + "\n");
                     } else {
                         if (counter < valueToShow && i == lastPosition) {
                             resultContacts.append("contactList contains less than" + valueToShow + " contacts: \n" + resultContacts);
@@ -154,36 +179,35 @@ public class ContactList {
                 }
             }
         }
-        return resultContacts;
+        return resultContacts.toString();
     }
 
-    public StringBuilder showFirst(int valueToShow){
-        StringBuilder resultContacts = new StringBuilder("");
+    public String showFirst(int valueToShow){
+        StringBuilder resultContacts = new StringBuilder();
 
         if (parameterValidation(valueToShow)) {
-            for (int i = 0; i < valueToShow; i++) {
+            for (int i = 0; i <= valueToShow; i++) {
 
                 if (contactList[i] == null) {
                     resultContacts.append(" contact not exist \n");
                 } else {
-                    resultContacts.append(" " + contactList[i].toString() + "\n");
+                    resultContacts.append(" " + i + "| " + contactList[i].toString() + "\n");
                 }
             }
         }
-        return resultContacts;
+        return resultContacts.toString();
     }
 
-    public StringBuilder showALLContacts(){
-
-        StringBuilder resultContacts = new StringBuilder("");
-        for (int i = 0; i < busyPlaces; i++) {
-            if (contactList[i] == null) {
-                resultContacts.append(" contact not exist \n");
+    public String showALLContacts(){
+        StringBuilder resultContacts = new StringBuilder();
+        for (int i = 0; i <= busyPlaces; i++) {
+            if (contactList[i] != null) {
+                resultContacts.append(" " + i + "| "+ contactList[i].toString() + "\n");
             } else {
-                resultContacts.append(" " + contactList[i].toString() + "\n");
+                resultContacts.append(" contact not exist \n");
             }
         }
-        return resultContacts;
+        return resultContacts.toString();
     }
 
     public StringBuilder showLifeContacts(){
