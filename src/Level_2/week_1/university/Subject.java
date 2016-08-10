@@ -7,66 +7,30 @@ public class Subject {
 
     private String name;
     private SemesterHours semesterHours;
-    private int studentHours;
-    private double value;
+    private double studentHours;
+    private double studentValue;
 
-    public void init(String name, SemesterHours semesterHours, int studentHours, double value){
+    public void init(String name, SemesterHours semesterHours, int studentHours, double studentValue){
         this.name = name;
         this.semesterHours = semesterHours;
         this.studentHours = studentHours;
-        this.value = value;
+        this.studentValue = studentValue;
     }
 
-    public String toString(){
-        return String.format("subject : %s, hours in semester : %s, student hours : %d, valuation : %2f",
-                name, semesterHours.toString(), studentHours, value);
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSemesterHours(SemesterHours semesterHours) {
-        this.semesterHours = semesterHours;
-    }
-
-    public void setStudentHours(int studentHours) {
-        this.studentHours = studentHours;
-    }
-
-    public void setValue(double value) {
-        this.value = value;
-    }
-
-    public String getName() {
-
-        return name;
-    }
-
-    public SemesterHours getSemesterHours() {
-        return semesterHours;
-    }
-
-    public int getStudentHours() {
-        return studentHours;
-    }
-
-    public double getValue() {
-        return value;
+    public String showSubjectInfo(){
+        return String.format("subject : %s, hours in semester : %s , student hours : %d, valuation : %2f",
+                name, semesterHours.toString(), studentHours, studentValue);
     }
 
     // need to check if user pass exam
-    public boolean passExamination(){
+    public boolean passExamination(Student studentValue){
+        if (studentValue.getValue() >= 3) {
+            return true;
+        }
         return false;
     }
 
-    //
-    public String showSubjectInfo(){
-        return null;
-    }
-
-    public double showStudentValue(Student student){
+    public double getStudentValue(Student student){
         return 0;
     }
-
 }
