@@ -38,7 +38,7 @@ public class ContactList {
             contactList[contactPosition] = null;
             result = true;
             busyPlaces--;
-            // arraycopy
+            System.arraycopy(contactList, 0, contactList, 1, contactPosition);
         }
         return result;
     }
@@ -206,13 +206,11 @@ public class ContactList {
         return result;
     }
 
-    // check validation for contact name and  contact surname
     public boolean contactValidation(Contact contact){
         return (contact.getName() == null || contact.getSurname() == null) ? false :
                 (!contact.getName().matches("^\\D*$")) || (!contact.getSurname().matches("^\\D*$")) ? false  : true;
     }
 
-    // check all symbols 7sdf463dfg276
     public boolean contactValidation(String contactName){
         return (contactName == null) ? false : !(contactName.matches("^\\D*$")) ? false : true;
     }
