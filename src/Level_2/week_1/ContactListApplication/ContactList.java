@@ -29,11 +29,13 @@ public class ContactList {
     }
 
     public boolean removeContact(String contactName){
-        if (checkPresentContactInContactList()) {
-            int contactPosition = findContactPositionInContactList(contactName);
+        int contactPosition = findContactPositionInContactList(contactName);
+        if (contactPosition != -1) {
             contactList[contactPosition] = null;
             busyPlaces--;
-            System.arraycopy(contactList, contactPosition + 1, contactList, contactPosition, contactPosition);
+            if (contactPosition != contactList.length - 1) {
+                System.arraycopy(contactList, contactPosition + 1, contactList, contactPosition, contactPosition);
+            }
             return true;
         }
         return false;
@@ -61,12 +63,9 @@ public class ContactList {
 
     public boolean checkUniqueName(Contact contact){
         if (checkPresentContactInContactList()) {
-
             for (int i = 0; i < busyPlaces; i++) {
                     if (contactList[i].getName() == contact.getName()) {
                         return false;
-                    } else {
-                        return true;
                     }
                 }
             }
@@ -75,12 +74,9 @@ public class ContactList {
 
     public boolean checkUniqueName(String contactName){
         if (checkPresentContactInContactList()) {
-
             for (int i = 0; i < busyPlaces; i++) {
                 if (contactList[i].getName() == contactName) {
                     return false;
-                } else {
-                    return true;
                 }
             }
         }
@@ -89,19 +85,14 @@ public class ContactList {
 
     // find contact position in Contact list by contact name
     public int findContactPositionInContactList(String contactName) {
-
-        int i = 0;
         if (checkPresentContactInContactList()) {
-            for (i = 0; i < contactList.length; i++) {
+            for (int i = 0; i < contactList.length; i++) {
                 if (contactList[i].getName() == contactName) {
                     return i;
                 }
             }
-            if (i == 0) {
-                return -1;
-            }
         }
-        return i;
+        return -1;
     }
 
     // find and show contact info by contact name
