@@ -31,11 +31,12 @@ public class Main {
         contactList.addContact(contact3);
 
         contactList.removeContact("nameFirstB");
-        System.out.println(contactList.showALLContacts());
+        System.out.println(contactList.showALLContactList());
 
-        //contactList.updateContactInfo("nameFirstA", "newNameForTest");
-        //System.out.println(contactList.showALLContacts());
+        contactList.updateContactInfo("nameFirstA", "newNameForTest");
+        System.out.println(contactList.showALLContactList());
 
-        //System.out.println(contactList.showLast(10));
+        System.out.println(contactList.showLast(10));
+        System.out.println(contactList.showContactsByOperator("KIEVSTAR"));
     }
 }

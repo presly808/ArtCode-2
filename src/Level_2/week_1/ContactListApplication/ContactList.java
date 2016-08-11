@@ -8,14 +8,17 @@ public class ContactList {
     private Contact[] contactList;
     private int busyPlaces;
 
+    private static final String LIFE = "LIFE";
+    private static final String KIEVSTAR = "KIEVSTAR";
+
     public void createContactList(){
         contactList = new Contact[100];
     }
 
     public boolean addContact(Contact contact){
         if (contactValidation(contact)) {
-            expandContactList();
             if (checkUniqueName(contact)) {
+                expandContactList();
                 contactList[busyPlaces++] = contact;
                 return true;
             } else
@@ -34,7 +37,7 @@ public class ContactList {
             contactList[contactPosition] = null;
             busyPlaces--;
             if (contactPosition != contactList.length - 1) {
-                System.arraycopy(contactList, contactPosition + 1, contactList, contactPosition, contactPosition);
+                System.arraycopy(contactList, contactPosition + 1, contactList, contactPosition, contactList.length - (contactPosition + 1));
             }
             return true;
         }
@@ -62,31 +65,23 @@ public class ContactList {
     }
 
     public boolean checkUniqueName(Contact contact){
-        if (checkPresentContactInContactList()) {
-            for (int i = 0; i < busyPlaces; i++) {
-                    if (contactList[i].getName() == contact.getName()) {
-                        return false;
-                    }
-                }
+        if (findContactPositionInContactList(contact.getName()) == -1) {
+            return true;
             }
-        return true;
+        return false;
     }
 
     public boolean checkUniqueName(String contactName){
-        if (checkPresentContactInContactList()) {
-            for (int i = 0; i < busyPlaces; i++) {
-                if (contactList[i].getName() == contactName) {
-                    return false;
-                }
-            }
+        if (findContactPositionInContactList(contactName) == -1) {
+            return true;
         }
-        return true;
+        return false;
     }
 
     // find contact position in Contact list by contact name
     public int findContactPositionInContactList(String contactName) {
-        if (checkPresentContactInContactList()) {
-            for (int i = 0; i < contactList.length; i++) {
+        if (busyPlaces > 0) {
+            for (int i = 0; i < busyPlaces; i++) {
                 if (contactList[i].getName() == contactName) {
                     return i;
                 }
@@ -97,27 +92,11 @@ public class ContactList {
 
     // find and show contact info by contact name
     public String findAndShowContactInContactList(String contactName) {
-        if (checkPresentContactInContactList()) {
-
+        if (busyPlaces > 0) {
             for (int i = 0; i < busyPlaces; i++)
                 return contactList[i].getName() == contactName ? contactList[i].toString() : "contact doesn`t exist";
             }
         return "contact doesn`t exist";
-    }
-
-    public boolean checkPresentContactInContactList(){
-        int counter = 0;
-        for (int i = 0; i < contactList.length; i++) {
-            if (contactList[i] != null) {
-                counter++;
-                break;
-            }
-        }
-        if (counter == 0) {
-            System.out.println("contact list empty");
-            return false;
-        } else
-            return true;
     }
 
     public void expandContactList(){
@@ -171,33 +150,36 @@ public class ContactList {
         return resultContacts.toString();
     }
 
-    public String showALLContacts(){
+    public String showALLContactList(){
         StringBuilder resultContacts = new StringBuilder();
-        for (int i = 0; i <= busyPlaces; i++) {
+        for (int i = 0; i < contactList.length; i++) {
             if (contactList[i] != null) {
                 resultContacts.append(" " + i + "| "+ contactList[i].toString() + "\n");
             } else {
-                resultContacts.append(" contact not exist \n");
+                resultContacts.append(i + "| contact not exist \n");
             }
         }
-        return resultContacts.toString();
+        return resultContacts.toString().trim();
     }
 
-    public StringBuilder showLifeContacts(){
+    public StringBuilder showContactsByOperator(String operator){
         StringBuilder result = new StringBuilder("");
-        for (int j = 0; j < busyPlaces; j++) {
-            if (contactList[j].getOperator() == "LIFE") {
-                result.append(contactList[j].toString() + " \n");
+
+        if (operator == LIFE) {
+            for (int j = 0; j < busyPlaces; j++) {
+                if (contactList[j].getOperator() == LIFE) {
+                    result.append(contactList[j].toString() + " \n");
+                }
             }
-        }
-        return result;
-    }
-
-    public StringBuilder showKievstarContacts(){
-        StringBuilder result = new StringBuilder("");
-        for (int j = 0; j < busyPlaces; j++) {
-            if (contactList[j].getOperator() == "KIEVSTAR") {
-                result.append(contactList[j].toString() + " \n");
+        } else {
+            if (operator == KIEVSTAR) {
+                for (int j = 0; j < busyPlaces; j++) {
+                    if (contactList[j].getOperator() == KIEVSTAR) {
+                        result.append(contactList[j].toString() + " \n");
+                    }
+                }
+            } else {
+                result.append("not exist");
             }
         }
         return result;
@@ -213,10 +195,10 @@ public class ContactList {
     }
 
     public boolean parameterValidation(int value){
-        if (value > contactList.length) {
-            System.out.println(value + " is very big");
-            return false;
+        if (value <= contactList.length && value > 0) {
+            return true;
         }
-        return true;
+        System.out.println(value + " is incorrect");
+        return false;
     }
 }
