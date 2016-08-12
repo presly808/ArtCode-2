@@ -6,15 +6,17 @@ package Level_2.week_1.university;
 public class SemesterHours {
 
     private int semester;
-    private double hours;
+    private int hours;
+    private int minHours;
 
-    public void init(int semester, double hours){
+    public SemesterHours(int semester, int hours){
         this.semester = semester;
         this.hours = hours;
+        this.minHours = (int) (hours * 0.3);
     }
 
     public String toString(){
-        return String.format("semester number : %d, hours : %2f", semester, hours);
+        return String.format("semester number : %d, hours : %d, min hours : %d", semester, hours, minHours);
     }
 
     public int getSemester(){
@@ -29,8 +31,12 @@ public class SemesterHours {
         this.semester = semester;
     }
 
-    public void setHours(double hours){
+    public void setHours(int hours){
         this.hours = hours;
+    }
+
+    public double getMinHours(){
+        return minHours;
     }
 
 }

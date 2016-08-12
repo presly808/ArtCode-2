@@ -1,4 +1,4 @@
-package Level_2.week_1.ContactListApplication;
+package Level_2.week_1.contactListApplication;
 
 /**
  * Created by pc on 08.08.2016.
@@ -8,15 +8,12 @@ public class ContactList {
     private Contact[] contactList;
     private int busyPlaces;
 
-    private static final String LIFE = "LIFE";
-    private static final String KIEVSTAR = "KIEVSTAR";
-
     public void createContactList(){
         contactList = new Contact[100];
     }
 
     public boolean addContact(Contact contact){
-        if (contactValidation(contact)) {
+        if (contactValidation(contact) != false) {
             if (checkUniqueName(contact)) {
                 expandContactList();
                 contactList[busyPlaces++] = contact;
@@ -27,7 +24,6 @@ public class ContactList {
         } else {
             System.out.println("Wrong validation for contact with name : " + contact.getName());
             return false;
-
         }
     }
 
@@ -44,9 +40,10 @@ public class ContactList {
         return false;
     }
 
-    // update name for contact
+    // якщо повертати контакта, то потрібно contactPosition знаходити перед валідаціями, що не дуже прикольно. Плюс не бачу семсу щоб його повертати оскільки в нас всеріно є його
+    // номер позиції, або новче імя за який ми можено до його звернутись
     public boolean updateContactInfo(String contactName, String newContactData){
-        if (contactValidation(newContactData)) {
+        if (contactValidation(newContactData) != false) {
             if (checkUniqueName(newContactData)) {
                 int contactPosition = findContactPositionInContactList(contactName);
                 if (contactPosition != -1) {
@@ -65,12 +62,13 @@ public class ContactList {
     }
 
     public boolean checkUniqueName(Contact contact){
-        if (findContactPositionInContactList(contact.getName()) == -1) {
+        if (checkUniqueName(contact.getName()) == true) {
             return true;
             }
         return false;
     }
 
+    // два посуті перегружені методи, які юзаємо щоб перевірити наше імя.контакт унікальним
     public boolean checkUniqueName(String contactName){
         if (findContactPositionInContactList(contactName) == -1) {
             return true;
@@ -80,23 +78,21 @@ public class ContactList {
 
     // find contact position in Contact list by contact name
     public int findContactPositionInContactList(String contactName) {
-        if (busyPlaces > 0) {
             for (int i = 0; i < busyPlaces; i++) {
                 if (contactList[i].getName() == contactName) {
                     return i;
                 }
             }
-        }
         return -1;
     }
 
-    // find and show contact info by contact name
-    public String findAndShowContactInContactList(String contactName) {
+    // не впевнений що даний метод взагалі потрібний, оскільки можна обійтись і без нього
+    public Contact findContactInContactList(String contactName) {
         if (busyPlaces > 0) {
             for (int i = 0; i < busyPlaces; i++)
-                return contactList[i].getName() == contactName ? contactList[i].toString() : "contact doesn`t exist";
+                return contactList[i].getName() == contactName ? contactList[i] : null;
             }
-        return "contact doesn`t exist";
+        return null;
     }
 
     public void expandContactList(){
@@ -108,6 +104,7 @@ public class ContactList {
         }
     }
 
+    // тут трохи не ясно, показувати останні N контактів з нашого списку, чи показувати останні N існуючих контактів з ношого списку, я думав останні існуючі, нащо нам показувати нал
     public String showLast(int valueToShow){
 
         StringBuilder resultContacts = new StringBuilder();
@@ -138,7 +135,7 @@ public class ContactList {
         StringBuilder resultContacts = new StringBuilder();
 
         if (parameterValidation(valueToShow)) {
-            for (int i = 0; i <= valueToShow; i++) {
+            for (int i = 0; i < valueToShow; i++) {
 
                 if (contactList[i] == null) {
                     resultContacts.append(" contact not exist \n");
@@ -165,16 +162,16 @@ public class ContactList {
     public StringBuilder showContactsByOperator(String operator){
         StringBuilder result = new StringBuilder("");
 
-        if (operator == LIFE) {
+        if (operator == "LIFE") {
             for (int j = 0; j < busyPlaces; j++) {
-                if (contactList[j].getOperator() == LIFE) {
+                if (contactList[j].getOperator() == "LIFE") {
                     result.append(contactList[j].toString() + " \n");
                 }
             }
         } else {
-            if (operator == KIEVSTAR) {
+            if (operator == "KIEVSTAR") {
                 for (int j = 0; j < busyPlaces; j++) {
-                    if (contactList[j].getOperator() == KIEVSTAR) {
+                    if (contactList[j].getOperator() == "KIEVSTAR") {
                         result.append(contactList[j].toString() + " \n");
                     }
                 }
@@ -195,7 +192,7 @@ public class ContactList {
     }
 
     public boolean parameterValidation(int value){
-        if (value <= contactList.length && value > 0) {
+        if (0 < value && value <= contactList.length) {
             return true;
         }
         System.out.println(value + " is incorrect");

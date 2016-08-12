@@ -7,30 +7,72 @@ public class Subject {
 
     private String name;
     private SemesterHours semesterHours;
-    private double studentHours;
-    private double studentValue;
+    private int studentHours;
+    private int studentValue;
 
-    public void init(String name, SemesterHours semesterHours, int studentHours, double studentValue){
+
+    public Subject(String name, SemesterHours semesterHours){
         this.name = name;
         this.semesterHours = semesterHours;
-        this.studentHours = studentHours;
-        this.studentValue = studentValue;
+        this.studentHours = generateStudentHours();
+        this.studentValue = generateStudentValue();
     }
 
-    public String showSubjectInfo(){
-        return String.format("subject : %s, hours in semester : %s , student hours : %d, valuation : %2f",
+    public String toString(){
+        return String.format("subject : %s, %s , student hours : %d, rating : %d",
                 name, semesterHours.toString(), studentHours, studentValue);
     }
 
     // need to check if user pass exam
-    public boolean passExamination(Student studentValue){
-        if (studentValue.getValue() >= 3) {
-            return true;
+    public boolean passExamination(Student student){
+        if (generateStudentValue() > 2 && generateStudentValue() <= 5) {
+            if (generateStudentHours() >= semesterHours.getMinHours()) {
+                return true;            }
         }
         return false;
     }
 
-    public double getStudentValue(Student student){
-        return 0;
+    public double getStudentValue(Subject subject){
+        return subject.getStudentValue();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public SemesterHours getSemesterHours() {
+        return semesterHours;
+    }
+
+    public int getStudentHours() {
+        return studentHours;
+    }
+
+    public int getStudentValue() {
+        return studentValue;
+    }
+
+    public int generateStudentValue(){
+        return (int)(Math.random() * 4) + 1;
+    }
+
+    public int generateStudentHours(){
+        return (int)(Math.random() * semesterHours.getHours());
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSemesterHours(SemesterHours semesterHours) {
+        this.semesterHours = semesterHours;
+    }
+
+    public void setStudentHours(int studentHours) {
+        this.studentHours = studentHours;
+    }
+
+    public void setStudentValue(int studentValue) {
+        this.studentValue = studentValue;
     }
 }

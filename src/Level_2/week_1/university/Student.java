@@ -5,16 +5,16 @@ package Level_2.week_1.university;
  */
 public class Student {
 
+    private Subject[] subjectList;
+
     private String name;
     private Address address;
-    private double value;
+    private int subjectQuantity;
 
-    private Subject[] subject;
-
-    public Student(String name, Address address, double value) {
+    public Student(String name, Address address) {
         this.name = name;
         this.address = address;
-        this.value = value;
+        subjectList = new Subject[10];
     }
 
     public String toString(){
@@ -29,33 +29,85 @@ public class Student {
         return address;
     }
 
-    public double getValue() {
-        return value;
-    }
-
     public Subject[] getSubject() {
-        return subject;
+        return subjectList;
     }
 
-    public void learning(Subject subject1){
-
+    public void learning(Subject subject){
+        int hours = subject.getStudentHours();
+        int subjectHours = (int) subject.getSemesterHours().getHours();
+        while (hours < subjectHours){
+            hours += 1;
+        }
+        subject.setStudentHours(hours);
+        subject.setStudentValue(subject.generateStudentValue());
     }
 
-    public boolean addSubject(){
+    public boolean addSubject(Subject subject){
+        int freePlace = findFreePlace();
+        subjectList[freePlace] = subject;
+        subjectQuantity++;
+        return true;
+    }
+
+    public boolean removeLastSubject(){
+        if (findLastSubject() != -1) {
+            subjectList[findLastSubject()] = null;
+            subjectQuantity--;
+            return true;
+        }
+        System.out.println("no subject to delete");
         return false;
     }
 
-    public boolean deleteSubjectFromList(String name){
-        return false;
+    public String showAllInfoAboutSubjects(){
+        StringBuilder st = new StringBuilder();
+        for (int i = 0; i < subjectQuantity; i++) {
+            st.append(i + "| " + subjectList[i].toString() + "\n");
+        }
+        return st.toString();
     }
 
-    public String showAllInfoAboutSubject(){
-        return "";
+    public double getGPA(){
+        if (subjectQuantity == 0) {
+            double gpa = 0;
+            for (int i = 0; i < subjectQuantity - 1; i++) {
+                gpa += subjectList[i].getStudentValue();
+            }
+            return gpa / subjectQuantity;
+        }
+        System.out.println("not available subject");
+        return -1;
     }
 
-    public double middleValueForAllSubjects(){
-        return 0;
+    public void expandSubjectList(){
+        if (subjectQuantity >= subjectList.length){
+            Subject[] newStudentList = new Subject[subjectList.length * 2];
+            System.arraycopy(subjectList, 0, newStudentList, 0, subjectList.length);
+            subjectList = newStudentList;;
+        }
     }
+
+    public int findFreePlace(){
+        expandSubjectList();
+        for (int i = 0; i < subjectList.length; i++) {
+            if (subjectList[i] == null) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int findLastSubject(){
+        if (subjectQuantity > 0) {
+            return subjectQuantity - 1;
+        }
+        return -1;
+    }
+
+
+
+
 
 
 }
