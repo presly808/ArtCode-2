@@ -1,4 +1,4 @@
-package Level_2.week_1.ContactListApplication;
+package Level_2.week_1.contactListApplication;
 
 /**
  * Created by oleksandr.maslovskyj on 09.08.2016.
